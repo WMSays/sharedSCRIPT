@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="PageTitles">20sp</dimen>
+    <dimen name="ParagraphText">14sp</dimen>
+    <dimen name="ListTitles">14sp</dimen>
+    <dimen name="BodyText">14sp</dimen>
+    <dimen name="EditText">16sp</dimen>
+    <dimen name="ButtonsTabs">14sp</dimen>
+    <dimen name="MainHeading">80dp</dimen>
+    <dimen name="TagLine">25dp</dimen>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".s_dash"
+    android:background="@color/colorBackground">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_gravity="top"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Toolbartop"
+            android:background="@drawable/top_bar_border">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorAccent">
+        //bottom bar
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/Toolbarbottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_bar_border">
+            //layout to hold the icons
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+                //inserting images
+
+                //my papers button
+
+                <ImageView
+                    android:id="@+id/imgbutton_mypapers"
+                    android:layout_width="113dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:src="@drawable/ic_mypapers" />
+                //deadline
+
+                <ImageView
+                    android:id="@+id/imgbutton_mydeadlines"
+                    android:layout_width="97dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:src="@drawable/ic_mydeadlines" />
+                //notifications
+
+                <ImageView
+                    android:id="@+id/imgbutton_notifications"
+                    android:layout_width="95dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:src="@drawable/ic_notifications" />
+                //settings
+
+                <ImageView
+                    android:id="@+id/imgbutton_settings"
+                    android:layout_width="127dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="25"
+                    android:src="@drawable/ic_settings" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
