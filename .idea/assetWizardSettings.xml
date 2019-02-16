@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_settings" />
-                            <entry key="sourceFile" value="E:\FYP\icons\appbar\settings.svg" />
+                            <entry key="outputName" value="ic_s_deadline" />
+                            <entry key="sourceFile" value="E:\FYP\icons\s_deadline.svg" />
                           </map>
                         </option>
                       </PersistentState>

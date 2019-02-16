@@ -16,7 +16,9 @@
 
         </stroke>
         <solid
-            android:color="@color/colorBackground"
+            android:color="@color/colorAppBar">
+
+        </solid>
     </shape>
 
 

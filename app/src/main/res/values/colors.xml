@@ -5,4 +5,5 @@
     <color name="colorAccent">#505050</color>
     <color name="colorText">#FFFFFF</color>
     <color name= "colorBackground">#32BEBE</color>
+    <color name="colorAppBar">#019E9E</color>
 </resources>
