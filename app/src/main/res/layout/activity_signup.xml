@@ -172,6 +172,11 @@ tools:context=".Signup">
                 android:textColorHint="@color/colorText"
                 android:textSize="18sp" />
         </android.support.v7.widget.CardView>
+        <ProgressBar
+            android:id="@+id/pb_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
 
         <Button
             android:id="@+id/btn_signup_submit"

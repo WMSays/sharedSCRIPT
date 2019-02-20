@@ -13,10 +13,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity implements View.OnClickListener {
     private Button btn_signup_submit;
@@ -28,7 +30,7 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
     private EditText  et_signup_reg_id;
 private EditText et_signup_confirm_password;
 private Spinner sp_signup_type;
-
+private ProgressBar pb_signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ private Spinner sp_signup_type;
         firebaseAuth_signup= FirebaseAuth.getInstance();
         et_signup_confirm_password = (EditText)findViewById(R.id.et_signup_confirm_password);
         sp_signup_type= (Spinner)findViewById(R.id.sp_signup_type);
+        pb_signup= (ProgressBar)findViewById(R.id.pb_signup);
 
     }
 
@@ -59,15 +62,25 @@ private Spinner sp_signup_type;
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //check if user is already signed in
+        if(firebaseAuth_signup.getCurrentUser()!=null)
+        {
+//TODO: enter logic to deal with already signed in user
+        }
+    }
+
     private void RegisterUser() {
         //get strings from edittexts
         String email= et_signup_email.getText().toString().trim();
         String password= et_signup_password.getText().toString().trim();
         String password2= et_signup_confirm_password.getText().toString().trim();
-        String firstName= et_signup_first_name.getText().toString().trim();
-        String lastName= et_signup_last_name.getText().toString().trim();
-        String regID= et_signup_reg_id.getText().toString().trim();
-        String userType= sp_signup_type.getSelectedItem().toString().trim();
+        final String firstName= et_signup_first_name.getText().toString().trim();
+        final String lastName= et_signup_last_name.getText().toString().trim();
+        final String regID= et_signup_reg_id.getText().toString().trim();
+        final String userType= sp_signup_type.getSelectedItem().toString().trim();
         //ensuring valid input
         if(email.isEmpty())
         {
@@ -115,14 +128,27 @@ private Spinner sp_signup_type;
 
 
 //registering user
+        pb_signup.setVisibility(View.VISIBLE);
+
         firebaseAuth_signup.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
+                            pb_signup.setVisibility(View.GONE);
+                        //TODO: insert custom progress bar.
+
                             //user is successfully registered
                             Toast.makeText(Signup.this, "Registeration successful", Toast.LENGTH_SHORT).show();
+                            //store additional info into database
+                            User user = new User(
+                                    firstName,lastName, regID, userType
+                            );
+//TODO: create firebase database object here
+                            FirebaseDatabase.getInstance().getReference("Users")
+                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user);
+
                         }
                         else
                         {
