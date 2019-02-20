@@ -11,6 +11,7 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:id="@+id/TopBar"
         android:background="@drawable/top_bar_border">
 
         <LinearLayout
@@ -28,13 +29,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="SCRIPT"
-                android:layout_weight="70"
-                android:textColor="@color/colorText"
-                android:textAlignment="center"
                 android:layout_gravity="center_vertical"
-                android:fontFamily="@font/Montserrat-SemiBold"
-                android:textSize="15pt"/>
+                android:layout_weight="70"
+                android:fontFamily="@font/montserratsemibold"
+                android:text="SCRIPT"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="15pt" />
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
@@ -45,24 +46,107 @@
     </android.support.design.widget.AppBarLayout>
 
 <!--content-->
-<android.support.v7.widget.CardView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TopBar"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+<!--Continue Reading Card View-->
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src=""/>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="30dp"
+            android:id="@+id/CardView_ContinueReading"
+            android:background="@color/colorText"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="164dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_reading" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:text="Continue Reading"
+                        android:textSize="35dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:text="Pick up where you left off "
+                        android:textSize="@dimen/TagLine" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
 
-    </RelativeLayout>
+        <!--New Arrival Card View-->
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_margin="30dp"
+            android:id="@+id/CardView_NewArrivals"
+            android:background="@color/colorText"
+            >
 
-</android.support.v7.widget.CardView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
 
+                <ImageView
+                    android:layout_width="164dp"
+                    android:layout_height="141dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_newarrival" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Arrivals"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:textSize="35dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:text="Check new papers you've received."
+                        android:textSize="@dimen/TagLine"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
 
 
 

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">SCRIPT</string>
+    <string name="signup_title">SIGN UP</string>
+    <string name="signup_description">Create your account as student(Researcher) or teacher(Supervisor)</string>
+    <string name="hnt_reg_id">You ID</string>
+    <string name="supervisor"> Supervisor</string>
+    <string name="researcher">Researcher</string>
+    <string-array name="signup_type">
+        <item>@string/supervisor</item>
+        <item>@string/researcher</item>
+    </string-array>
+    <string name="signup_prompt">"Don't have an account? Click below to Sign Up."</string>
+    <string name="already_registered">Already Registered. Click to Sign in.</string>
+
 </resources>

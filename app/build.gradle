@@ -20,6 +20,12 @@ android {
 
 dependencies {
     //start here
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+
+
+
+   //classpath 'com.google.gms:google-services:4.2.0' // google-services plugin
+
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -37,6 +43,10 @@ dependencies {
     //implementation 'com.android.support:design:28.1.0'
     implementation group: 'com.android.support', name: 'appcompat-v7', version: '28.0.0-alpha3'
 
+    //
+
+
+
     implementation 'com.android.support:design:28.0.0'
 
     //cardview
@@ -44,5 +54,11 @@ dependencies {
 
     //Universal Image Loader
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //firebase authentication
+     implementation 'com.google.firebase:firebase-auth:16.1.0'
     //ends here
+    apply plugin: 'com.google.gms.google-services'
+
+    //com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+
 }
