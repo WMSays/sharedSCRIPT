@@ -10,11 +10,11 @@
     <shape
         android:shape="rectangle">
 
-        <stroke
-            android:width="0.5dp"
-            android:color="@color/colorPrimaryDark">
+        <!--<stroke-->
+            <!--android:width="0.5dp"-->
+            <!--android:color="@color/colorPrimaryDark">-->
 
-        </stroke>
+        <!--</stroke>-->
         <solid
             android:color="@color/colorAppBar">
 
