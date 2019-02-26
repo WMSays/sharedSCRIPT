@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NavBar"
+
     android:background="@color/colorBackground">
     <!--//top bar-->
 
@@ -44,108 +45,201 @@
 <!--content-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/TopBar"
-        android:layout_marginTop="28dp"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
-<!--Continue Reading Card View-->
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.CardView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_margin="30dp"
-            android:id="@+id/CardView_ContinueReading"
-            android:background="@color/colorText"
-            >
+            android:layout_height="wrap_content"
+            android:foregroundGravity="center"
+            android:scrollbarStyle="insideInset">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
 
-                <ImageView
-                    android:layout_width="164dp"
-                    android:layout_height="141dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_reading" />
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="76dp"
+                android:layout_marginBottom="146dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <!--Continue Reading Card View-->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardView_ContinueReading"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorText"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="569dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserratsemibold"
-                        android:text="Continue Reading"
-                        android:textSize="35dp"
-                        android:textStyle="bold" />
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserratsemibold"
-                        android:text="Pick up where you left off "
-                        android:textSize="@dimen/TagLine" />
-
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+                        <ImageView
+                            android:layout_width="85dp"
+                            android:layout_height="91dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_reading" />
 
 
-        <!--New Arrival Card View-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="Continue Reading"
+                            android:textSize="@dimen/TagLine"
+                            android:textStyle="bold" />
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_margin="30dp"
-            android:id="@+id/CardView_NewArrivals"
-            android:background="@color/colorText"
-            >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="Pick up where you left off "
+                            android:textSize="@dimen/BodyText" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-                <ImageView
-                    android:layout_width="164dp"
-                    android:layout_height="141dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_newarrival" />
+                <!--New Arrivals Card View-->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardView_NewArrivals"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_margin="10dp"
+                    android:background="@color/colorText"
+                    app:cardCornerRadius="20dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="New Arrivals"
-                        android:fontFamily="@font/montserratsemibold"
-                        android:textSize="35dp"
-                        android:textStyle="bold"/>
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <ImageView
+                            android:layout_width="85dp"
+                            android:layout_height="91dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_newarrival" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="New Arrivals"
+                            android:textSize="@dimen/TagLine"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="Check new papers you've received. "
+                            android:textSize="@dimen/BodyText" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--My papers Card View-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardView_MyPapers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorText"
+                    app:cardCornerRadius="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="85dp"
+                            android:layout_height="91dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_s_deadline" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="Deadlines"
+                            android:textSize="@dimen/TagLine"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="View ToDo list and deadlines. "
+                            android:textSize="@dimen/BodyText" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+                <!--My deadlines card view-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/CardView_MyDeadlines"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorText"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="569dp"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserratsemibold"
-                        android:text="Check new papers you've received."
-                        android:textSize="@dimen/TagLine"/>
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
 
-                </LinearLayout>
+                        <ImageView
+                            android:layout_width="85dp"
+                            android:layout_height="91dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/papers" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="All papers"
+                            android:textSize="@dimen/TagLine"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserratsemibold"
+                            android:text="View all papers in your supervision."
+                            android:textSize="@dimen/BodyText" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
             </LinearLayout>
-        </android.support.v7.widget.CardView>
 
+        </ScrollView>
     </LinearLayout>
-
-
-
 
     <!--//bottom bar-->
 
