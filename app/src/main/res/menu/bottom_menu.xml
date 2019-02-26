@@ -32,12 +32,12 @@
 
     </item>
 
-    <item
-        android:id="@+id/ic_item_signout"
-        android:icon="@drawable/ic_user"
-        android:title="SignOut">
+    <!--<item-->
+        <!--android:id="@+id/ic_item_signout"-->
+        <!--android:icon="@drawable/ic_user"-->
+        <!--android:title="SignOut">-->
 
-    </item>
+    <!--</item>-->
 
 
 </menu>

@@ -7,12 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class s_dash extends AppCompatActivity {
+public class Settings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_s_dash);
+        setContentView(R.layout.activity_settings);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.BottomNavBar);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -22,17 +22,17 @@ public class s_dash extends AppCompatActivity {
                 {
                     case R.id.ic_item_home:
 //                        TODO: logic to choose intent based on userType.
-                        Intent intent1 = new Intent(s_dash.this, s_dash.class);
+                        Intent intent1 = new Intent(Settings.this, s_dash.class);
                         startActivity(intent1);
                         break;
                     case R.id.ic_item_notifications:
-                        Intent intent2 = new Intent(s_dash.this, S_Notification.class);
+                        Intent intent2 = new Intent(Settings.this, S_Notification.class);
                         startActivity(intent2);
 
 
                         break;
                     case R.id.ic_item_settings:
-                        Intent intent3 = new Intent(s_dash.this, Settings.class);
+                        Intent intent3 = new Intent(Settings.this, Settings.class);
                         startActivity(intent3);
 
                         break;
