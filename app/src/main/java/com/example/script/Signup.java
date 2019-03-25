@@ -164,14 +164,14 @@ private DatabaseReference databaseUsers;
                             databaseUsers.child(id).setValue(user);
 
                             pb_signup.setVisibility(View.GONE);
-                            //Log.d("setvalue", task.getException().getMessage());
+                            Log.d("setvalue", task.getException().getMessage());
 
                             Toast.makeText(Signup.this, "Registeration successful", Toast.LENGTH_SHORT).show();
 
                         }
                         else
                         {
-                        //Log.d("fbtask", task.getException().getMessage());
+                        Log.d("fbtask", task.getException().getMessage());
                             Toast.makeText(Signup.this, "Registeration failed", Toast.LENGTH_SHORT).show();
 
                         }

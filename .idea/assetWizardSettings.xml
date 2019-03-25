@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="papers" />
-                            <entry key="sourceFile" value="E:\FYP\icons\deadlines (2).svg" />
+                            <entry key="outputName" value="ic_upload_file" />
+                            <entry key="sourceFile" value="E:\FYP\icons\upload_file.svg" />
                           </map>
                         </option>
                       </PersistentState>

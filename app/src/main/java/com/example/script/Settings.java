@@ -6,14 +6,19 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Settings extends AppCompatActivity {
-
+private Button btn_signout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.BottomNavBar);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.Settings_BottomNavBar);
+        btn_signout =(Button)findViewById(R.id.btn_signout);
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -42,5 +47,14 @@ public class Settings extends AppCompatActivity {
                 return false;
             }
         });
+   btn_signout.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View view) {
+           FirebaseAuth.getInstance().signOut();
+           Intent intent = new Intent(Settings.this, MainActivity.class);
+           startActivity(intent);
+finish();
+       }
+   });
     }
 }

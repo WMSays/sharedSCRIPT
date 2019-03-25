@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".r_welcome"
+    android:background="@color/colorBackground">
+    <!--top bar-->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TopBar"
+        android:background="@drawable/top_bar_border">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="100"
+                android:fontFamily="@font/montserratsemibold"
+                android:text="SCRIPT"
+                android:textAlignment="center"
+                android:textColor="@color/colorText"
+                android:textSize="15pt" />
+
+            <!--<ImageView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_weight="15"-->
+            <!--android:src="@drawable/ic_user" />-->
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--content-->
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"
+        tools:context="com.example.script.r_welcome">
+        <EditText
+            android:id="@+id/editText7"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:ems="10"
+            android:background="@drawable/button_normal"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/editText7"
+            android:layout_below="@+id/editText7"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:background="@drawable/edittext_layout"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
+            android:id="@+id/editText9"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@+id/editText8"
+            android:layout_below="@+id/editText8"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_layout"
+            android:ems="10"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
+            android:id="@+id/editText10"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_alignEnd="@+id/editText9"
+            android:layout_below="@+id/editText9"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Abstract Here"
+            android:background="@drawable/edittext_layout"
+            />
+
+        <Button
+            android:id="@+id/btn_nxt"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="200dp"
+            android:background="@drawable/buttonlayout"
+            android:text="Next"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ButtonsTabs" />
+
+
+    </android.support.v4.view.ViewPager>
+    <!--bottom bar-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/RelativeLayoutBottomNavBar">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/S_dash_BottomNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_bar_border"
+            app:menu="@menu/bottom_menu"
+            app:itemHorizontalTranslationEnabled="false">
+
+
+        </android.support.design.widget.BottomNavigationView>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

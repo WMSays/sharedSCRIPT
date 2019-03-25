@@ -43,15 +43,17 @@
     </android.support.design.widget.AppBarLayout>
 
 <!--content-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:scrollbarStyle="insideInset">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:foregroundGravity="center"
-            android:scrollbarStyle="insideInset">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,7 +68,7 @@
                 <!--Continue Reading Card View-->
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/CardView_ContinueReading"
+                    android:id="@+id/s_dash_CardView_ContinueReading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
@@ -111,7 +113,7 @@
                 <!--New Arrivals Card View-->
 
                 <android.support.v7.widget.CardView
-                    android:id="@+id/CardView_NewArrivals"
+                    android:id="@+id/s_dash_CardView_NewArrivals"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -153,7 +155,7 @@
 
                 <!--My papers Card View-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/CardView_MyPapers"
+                    android:id="@+id/s_dash_CardView_MyPapers"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -194,7 +196,7 @@
                 </android.support.v7.widget.CardView>
                 <!--My deadlines card view-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/CardView_MyDeadlines"
+                    android:id="@+id/s_dash_CardView_MyDeadlines"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -238,8 +240,8 @@
 
             </LinearLayout>
 
-        </ScrollView>
     </LinearLayout>
+    </ScrollView>
 
     <!--//bottom bar-->
 
@@ -250,7 +252,7 @@
         android:id="@+id/RelativeLayoutBottomNavBar">
 
         <android.support.design.widget.BottomNavigationView
-            android:id="@+id/BottomNavBar"
+            android:id="@+id/S_dash_BottomNavBar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/bottom_bar_border"
