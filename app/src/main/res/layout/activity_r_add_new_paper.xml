@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/topbarlayout"
+        tools:context=".r_add_new_paper"
+        android:background="@color/colorBackground">
+        <!--//top bar-->
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/TopBar"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bar_border">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="100"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:text="SCRIPT"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorText"
+                    android:textSize="15pt" />
+
+                <!--<ImageView-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="15"-->
+                <!--android:src="@drawable/ic_user" />-->
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <!--content-->
+            <ScrollView
+                android:layout_below="@+id/TopBar"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserratsemibold"
+                    android:gravity="center"
+                    android:text="@string/get_paper_info"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp" />
+                    <!--Title-->
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorText">
+
+                    <EditText
+                        android:id="@+id/et_r_new_paper_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Paper Title" />
+
+                </android.support.design.widget.TextInputLayout>
+                    <!--Abstract-->
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorText">
+
+                        <EditText
+                            android:id="@+id/et_r_new_paper_abstract"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+
+                        android:lines="8"
+                        android:minLines="6"
+                        android:gravity="top|left"
+                        android:maxLines="10"
+
+                        android:scrollbars="vertical"
+                            android:hint="Abstract" />
+
+                    </android.support.design.widget.TextInputLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:gravity="center"
+                        android:text="@string/upload_paper"
+                        android:textColor="@color/colorText"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/btn_mainact_signin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_gravity="center"
+
+                        android:background="@drawable/buttonlayout"
+                        android:text="@string/choose_file"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/ButtonsTabs"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+            </ScrollView>
+
+
+
+
+
+
+
+
+        <!--//bottom bar-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/RelativeLayoutBottomNavBar">
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/BottomNavBar"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="5dp"
+                android:background="@drawable/bottom_bar_border"
+                app:menu="@menu/bottom_menu"
+                app:itemHorizontalTranslationEnabled="false">
+
+
+            </android.support.design.widget.BottomNavigationView>
+
+        </RelativeLayout>
+
+</RelativeLayout>

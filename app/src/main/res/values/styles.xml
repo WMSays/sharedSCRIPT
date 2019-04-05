@@ -6,7 +6,7 @@
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
-    <item name="android:fontFamily">@font/</item>
+    <item name="android:fontFamily">@font/Montserrat-Light</item>
 </style>
 
     <style name="AppThemeActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -14,7 +14,7 @@
         <item name="colorPrimary">#00F00808</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily">@font/</item>
+        <item name="android:fontFamily">@font/Montserrat-Light</item>
     </style>
 
 </resources>

@@ -16,7 +16,7 @@
 
             <!--</stroke>-->
             <solid
-                android:color="@color/colorBackground"></solid>
+                android:color="@color/colorPrimaryDark"></solid>
         </shape>
 
 

@@ -11,5 +11,8 @@
     </string-array>
     <string name="signup_prompt">"Don't have an account? Click below to Sign Up."</string>
     <string name="already_registered">Already Registered. Click to Sign in.</string>
+    <string name="get_paper_info">Tell us about your paper.</string>
+    <string name="upload_paper">Upload your paper in .doc format</string>
+    <string name="choose_file">Select File</string>
 
 </resources>

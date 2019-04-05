@@ -25,23 +25,23 @@ tools:context=".Signup">
     android:layout_marginTop="2dp"
     android:background="@color/colorPrimaryDark" />
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:fontFamily="@font/montserratsemibold"
-    android:gravity="center"
-    android:text="@string/signup_description"
-    android:textColor="@color/colorText"
-    android:textSize="18sp" />
-
-<View
+    <View
     android:layout_width="match_parent"
     android:layout_height="1dp"
     android:layout_marginTop="2dp"
     android:background="@color/colorPrimaryDark" />
 
-<ScrollView
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserratsemibold"
+        android:gravity="center"
+        android:text="@string/signup_description"
+        android:textColor="@color/colorText"
+        android:textSize="18sp" />
+
+    <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp">
