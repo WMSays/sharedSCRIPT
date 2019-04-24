@@ -14,5 +14,7 @@
     <string name="get_paper_info">Tell us about your paper.</string>
     <string name="upload_paper">Upload your paper in .doc format</string>
     <string name="choose_file">Select File</string>
+    <string name="notif_none_selected">No file is selected.</string>
+    <string name="upload_file">UPLOAD</string>
 
 </resources>

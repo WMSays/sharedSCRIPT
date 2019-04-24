@@ -57,7 +57,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="42dp"
             android:ems="10"
-            android:background="@drawable/button_n"
+            android:background="@drawable/buttonlayout"
             android:inputType="textPersonName"/>
 
         <EditText

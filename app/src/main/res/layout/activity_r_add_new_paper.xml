@@ -108,20 +108,42 @@
                         android:textColor="@color/colorText"
                         android:textSize="18sp" />
 
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/iv_r_add_new_paper_select_file"
+        android:src="@drawable/ic_upload_file"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_r_add_new_paper_notif"
+        android:fontFamily="@font/montserratsemibold"
+        android:gravity="center"
+        android:text="@string/notif_none_selected"
+        android:textColor="@color/colorText"
+        android:textSize="18sp" />
+
+
+
+
                     <Button
-                        android:id="@+id/btn_mainact_signin"
+                        android:id="@+id/btn_r_add_new_paper_upload_file"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
 
                         android:background="@drawable/buttonlayout"
-                        android:text="@string/choose_file"
+                        android:text="@string/upload_file"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/ButtonsTabs"
                         />
-
 
 
                 </LinearLayout>

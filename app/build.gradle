@@ -4,6 +4,13 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 28
     defaultConfig {
+        //annotation processors must be explicitely declared now
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        //end of fix
         applicationId "com.example.script"
         minSdkVersion 23
         targetSdkVersion 28
